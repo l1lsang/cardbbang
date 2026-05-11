@@ -1,0 +1,54 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  --ink: #0e2224;
+  --muted: #667574;
+  --muted-strong: #425352;
+  --green: #11a872;
+  --green-deep: #08795a;
+  --soft-mint: #e8f7ef;
+  --soft-yellow: #fff1a6;
+  --line: rgba(14, 34, 36, 0.1);
+  font-family:
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    'Segoe UI',
+    sans-serif;
+  color: var(--ink);
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+a,
+button {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(17, 168, 114, 0.45);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--soft-yellow);
+  color: var(--ink);
+}
