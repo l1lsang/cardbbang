@@ -1,5 +1,5 @@
 import { useEffect, type CSSProperties } from 'react'
-import heroImg from './assets/logo.png'
+import logoImg from './assets/logo.png'
 import './App.css'
 
 type RevealStyle = CSSProperties & {
@@ -110,7 +110,9 @@ function App() {
     <main className="site-shell">
       <header className="header" aria-label="카드빵 주요 메뉴">
         <a className="brand" href="#top" aria-label="카드빵 홈">
-          <span className="brand-mark">CB</span>
+          <span className="brand-mark" aria-hidden="true">
+            <img src={logoImg} alt="" />
+          </span>
           <span>카드빵</span>
         </a>
         <nav className="nav" aria-label="페이지 이동">
@@ -196,7 +198,7 @@ function App() {
               </div>
               <small>24H CONSULTING</small>
             </div>
-            <img src={heroImg} alt="" className="layered-card" />
+            <img src={logoImg} alt="" className="layered-card" />
             <div className="deposit-chip">
               <span>상담 후</span>
               <strong>빠른 안내</strong>
@@ -348,7 +350,10 @@ function App() {
       </section>
 
       <footer className="footer" data-reveal="fade">
-        <strong>카드빵</strong>
+        <strong className="footer-brand">
+          <img src={logoImg} alt="" />
+          카드빵
+        </strong>
         <p>
           본 서비스는 반드시 본인 명의로만 상담이 가능하며, 타인 명의 신용카드
           및 계좌 진행은 불가합니다. 과도한 채무는 일상에 부담이 될 수 있으니
