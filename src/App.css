@@ -366,6 +366,26 @@ p {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  isolation: isolate;
+}
+
+.portrait-stage::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 0;
+  width: min(430px, 86%);
+  height: 520px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(14, 34, 36, 0.08);
+  border-radius: 230px 230px 28px 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(232, 247, 239, 0.98) 54%, rgba(255, 241, 166, 0.72)),
+    #effaf4;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 28px 72px rgba(14, 34, 36, 0.12);
 }
 
 .portrait-stage::after {
@@ -373,7 +393,7 @@ p {
   position: absolute;
   left: 50%;
   bottom: 0;
-  z-index: -1;
+  z-index: 0;
   width: 70%;
   height: 34px;
   transform: translateX(-50%);
@@ -384,7 +404,7 @@ p {
 
 .hero-woman {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(500px, 98%);
   height: auto;
   max-height: 100%;
@@ -395,7 +415,7 @@ p {
 
 .quick-badge {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   min-width: 146px;
   padding: 16px 18px;
   border-radius: 8px;
@@ -445,7 +465,7 @@ p {
   position: absolute;
   left: 18px;
   bottom: 4px;
-  z-index: 3;
+  z-index: 5;
   width: 238px;
   height: 148px;
   pointer-events: none;
@@ -925,6 +945,12 @@ p {
     height: 480px;
   }
 
+  .portrait-stage::before {
+    bottom: 12px;
+    width: min(390px, 82%);
+    height: 430px;
+  }
+
   .hero-woman {
     width: min(430px, 92%);
   }
@@ -1030,6 +1056,13 @@ p {
   .portrait-stage {
     width: 100%;
     height: 420px;
+  }
+
+  .portrait-stage::before {
+    bottom: 10px;
+    width: min(315px, 82%);
+    height: 370px;
+    border-radius: 180px 180px 20px 20px;
   }
 
   .visual-halo::before {
