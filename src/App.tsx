@@ -13,6 +13,7 @@ const revealDelay = (index: number, step = 90): RevealStyle => ({
 const phoneNumber = '010-6475-9884'
 const phoneHref = 'tel:01064759884'
 const kakaoHref = 'https://open.kakao.com/o/sxYY1sui'
+const officialDomain = 'www.카드빵.com'
 
 const strengths = [
   {
@@ -271,7 +272,7 @@ function App() {
         </div>
         <div className="notice-panel" data-reveal="right" style={revealDelay(1)}>
           <strong>공식 주소</strong>
-          <span>www.cardbbang.co.kr</span>
+          <span>{officialDomain}</span>
           <p>
             사칭 사이트를 통한 피해는 도움을 받기 어려울 수 있습니다. 상담 전
             주소와 채널명을 꼭 확인하세요.
