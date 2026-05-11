@@ -1,5 +1,6 @@
 import { useEffect, type CSSProperties } from 'react'
 import logoImg from './assets/logo.png'
+import womanImg from './assets/woman.png'
 import './App.css'
 
 type RevealStyle = CSSProperties & {
@@ -182,27 +183,42 @@ function App() {
 
         <div
           className="hero-visual"
-          aria-label="밝은 터널 속 카드 이미지"
+          aria-label="카드를 들고 있는 카드빵 상담 이미지"
           data-reveal="right"
           style={revealDelay(3)}
         >
-          <div className="tunnel">
+          <div className="visual-halo" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <div className="card-scene">
-            <div className="glass-card glass-card-main">
-              <div>
-                <span>CARDBBANG</span>
-                <strong>카드빵</strong>
-              </div>
-              <small>24H CONSULTING</small>
+          <div className="portrait-stage">
+            <img
+              src={womanImg}
+              alt="신용카드를 들고 웃고 있는 한국인 여성"
+              className="hero-woman"
+            />
+            <div className="quick-badge quick-badge-primary">
+              <span>24시간</span>
+              <strong>상담 가능</strong>
             </div>
-            <img src={logoImg} alt="" className="layered-card" />
-            <div className="deposit-chip">
-              <span>상담 후</span>
-              <strong>빠른 안내</strong>
+            <div className="quick-badge quick-badge-secondary">
+              <span>본인 명의</span>
+              <strong>우선 확인</strong>
+            </div>
+            <div className="virtual-card-scene" aria-hidden="true">
+              <div className="virtual-glass-card">
+                <div>
+                  <span>CARDBBANG</span>
+                  <strong>카드빵</strong>
+                </div>
+                <small>24H</small>
+              </div>
+              <img src={logoImg} alt="" className="virtual-layered-card" />
+              <div className="virtual-card-chip">
+                <span>상담 후</span>
+                <strong>빠른 안내</strong>
+              </div>
             </div>
           </div>
         </div>
