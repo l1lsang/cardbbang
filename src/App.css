@@ -188,6 +188,17 @@ p {
   line-height: 1.72;
 }
 
+.ui-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .hero-description {
   max-width: 640px;
   margin-bottom: 30px;
@@ -588,6 +599,102 @@ p {
   margin: 0 auto;
 }
 
+.service-band,
+.split-section,
+.notice-section,
+.trust-section,
+.info-section,
+.contact-section {
+  position: relative;
+}
+
+.service-band,
+.notice-section,
+.trust-section,
+.info-section,
+.contact-section {
+  overflow: hidden;
+}
+
+.service-band > :not(.section-bg-icon),
+.split-section > :not(.section-bg-icon),
+.notice-section > :not(.section-bg-icon),
+.trust-section > :not(.section-bg-icon),
+.info-section > :not(.section-bg-icon),
+.contact-section > :not(.section-bg-icon) {
+  position: relative;
+  z-index: 1;
+}
+
+.section-bg-icon {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: 210px;
+  height: 210px;
+  color: rgba(8, 121, 90, 0.07);
+  pointer-events: none;
+}
+
+.section-bg-icon .ui-icon {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.05;
+}
+
+.service-bg-icon {
+  top: 46px;
+  right: -34px;
+  width: 240px;
+  height: 240px;
+  transform: rotate(-8deg);
+}
+
+.process-bg-icon {
+  left: -42px;
+  bottom: 34px;
+  width: 230px;
+  height: 230px;
+  color: rgba(14, 34, 36, 0.045);
+  transform: rotate(7deg);
+}
+
+.notice-bg-icon {
+  right: -38px;
+  bottom: -54px;
+  width: 260px;
+  height: 260px;
+  color: rgba(255, 255, 255, 0.2);
+  transform: rotate(-7deg);
+}
+
+.trust-bg-icon {
+  top: 54px;
+  right: -18px;
+  width: 210px;
+  height: 210px;
+  color: rgba(8, 121, 90, 0.06);
+  transform: rotate(6deg);
+}
+
+.info-bg-icon {
+  left: -30px;
+  top: 48px;
+  width: 220px;
+  height: 220px;
+  color: rgba(8, 121, 90, 0.055);
+  transform: rotate(-5deg);
+}
+
+.contact-bg-icon {
+  right: 20px;
+  top: -46px;
+  width: 210px;
+  height: 210px;
+  color: rgba(255, 255, 255, 0.11);
+  transform: rotate(8deg);
+}
+
 .service-band {
   padding: 92px 0 82px;
   border-top: 1px solid rgba(14, 34, 36, 0.08);
@@ -630,17 +737,39 @@ p {
   box-shadow: 0 18px 42px rgba(14, 34, 36, 0.06);
 }
 
-.strength-card span {
+.strength-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 50px;
+}
+
+.strength-card-head > span:first-child {
   display: inline-grid;
   place-items: center;
   width: 42px;
   height: 32px;
-  margin-bottom: 54px;
   border-radius: 6px;
   background: var(--soft-yellow);
   color: var(--ink);
   font-size: 13px;
   font-weight: 900;
+}
+
+.mini-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--soft-mint);
+  color: var(--green-deep);
+}
+
+.mini-icon .ui-icon {
+  width: 23px;
+  height: 23px;
 }
 
 .strength-card p {
@@ -677,16 +806,29 @@ p {
   box-shadow: 0 18px 42px rgba(14, 34, 36, 0.16);
 }
 
-.process-item span {
-  display: grid;
+.process-mark {
+  display: inline-grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
+  align-self: start;
+  width: 64px;
+  height: 64px;
   border-radius: 8px;
   background: var(--green);
   color: #ffffff;
-  font-size: 24px;
+}
+
+.process-mark b {
+  display: block;
+  margin-bottom: -4px;
+  font-size: 22px;
   font-weight: 900;
+  line-height: 1;
+}
+
+.process-mark .ui-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.82;
 }
 
 .process-item h3,
@@ -717,6 +859,30 @@ p {
   color: #102022;
 }
 
+.notice-copy h2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.heading-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  margin-top: 2px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--green-deep);
+  box-shadow: 0 14px 34px rgba(14, 34, 36, 0.1);
+}
+
+.heading-icon .ui-icon {
+  width: 25px;
+  height: 25px;
+}
+
 .notice-copy p {
   font-weight: 650;
 }
@@ -733,9 +899,27 @@ p {
 }
 
 .notice-panel strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   color: var(--ink);
   font-size: 15px;
   font-weight: 900;
+}
+
+.panel-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--soft-mint);
+  color: var(--green-deep);
+}
+
+.panel-icon .ui-icon {
+  width: 17px;
+  height: 17px;
 }
 
 .notice-panel span {
@@ -773,15 +957,20 @@ p {
   background: #ffffff;
 }
 
-.trust-item span {
+.trust-icon {
+  display: inline-grid;
+  place-items: center;
   flex: 0 0 auto;
-  width: 18px;
-  height: 18px;
-  border-radius: 5px;
-  background:
-    linear-gradient(135deg, transparent 44%, #ffffff 45% 55%, transparent 56%),
-    var(--green);
-  box-shadow: 0 0 0 6px var(--soft-mint);
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: var(--soft-mint);
+  color: var(--green-deep);
+}
+
+.trust-icon .ui-icon {
+  width: 22px;
+  height: 22px;
 }
 
 .trust-item p {
@@ -806,14 +995,32 @@ p {
 }
 
 .company-item {
+  position: relative;
   min-height: 98px;
   padding: 18px;
   border-radius: 8px;
   background: var(--soft-mint);
 }
 
+.company-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--green-deep);
+  box-shadow: 0 10px 22px rgba(14, 34, 36, 0.08);
+}
+
+.company-icon .ui-icon {
+  width: 17px;
+  height: 17px;
+}
+
 .company-item strong,
-.company-item span {
+.company-item > span:not(.company-icon) {
   display: block;
 }
 
@@ -823,7 +1030,7 @@ p {
   font-weight: 900;
 }
 
-.company-item span {
+.company-item > span:not(.company-icon) {
   margin-top: 9px;
   color: var(--green-deep);
   font-weight: 900;
@@ -1049,6 +1256,46 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .section-bg-icon {
+    width: 150px;
+    height: 150px;
+    opacity: 0.76;
+  }
+
+  .service-bg-icon {
+    top: 44px;
+    right: -52px;
+  }
+
+  .process-bg-icon {
+    right: -48px;
+    bottom: 18px;
+    left: auto;
+  }
+
+  .notice-bg-icon {
+    right: -44px;
+    bottom: -34px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .trust-bg-icon {
+    top: 30px;
+    right: -56px;
+  }
+
+  .info-bg-icon {
+    top: 40px;
+    right: -50px;
+    left: auto;
+  }
+
+  .contact-bg-icon {
+    top: -34px;
+    right: -36px;
+  }
+
   .hero-visual {
     min-height: 420px;
   }
@@ -1177,7 +1424,7 @@ p {
     min-height: 230px;
   }
 
-  .strength-card span {
+  .strength-card-head {
     margin-bottom: 34px;
   }
 
