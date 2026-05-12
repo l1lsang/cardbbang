@@ -225,6 +225,76 @@ const cardCompanies = [
   ['비씨카드', '1588-4000'],
 ]
 
+const guideArticles: Array<{
+  title: string
+  paragraphs: string[]
+}> = [
+  {
+    title: '신용카드 현금화 상담은 무엇을 확인하나요?',
+    paragraphs: [
+      '갑작스럽게 현금 흐름이 막히는 순간에는 단순히 한도만 남아 있는지를 보는 것보다, 실제로 어떤 방식이 가능한지부터 차분히 확인하는 과정이 중요합니다. 카드빵은 필요한 금액과 사용 중인 카드사, 남은 결제 한도, 본인 명의 계좌 여부를 먼저 살펴 상담의 기준을 세웁니다.',
+      '진행 가능 여부는 카드 한도 하나만으로 정해지지 않습니다. 카드사별 정책, 할부 전환 가능 여부, 상담 시점의 조건, 이용자가 감당할 수 있는 상환 범위까지 함께 봐야 이후 부담을 줄일 수 있습니다.',
+    ],
+  },
+  {
+    title: '수수료 숫자보다 먼저 봐야 할 기준',
+    paragraphs: [
+      '상담을 비교할 때는 지급률이나 수수료 문구만 크게 보는 경우가 많지만, 실제로는 최종 입금 예상액, 결제 총액, 상환 시기, 추가 확인이 필요한 조건을 함께 비교해야 합니다. 같은 금액을 문의하더라도 결제 방식과 카드사 조건에 따라 안내 내용은 달라질 수 있습니다.',
+      '지나치게 낮은 수수료나 과장된 입금 속도만 강조하는 문구는 한 번 더 확인하는 편이 좋습니다. 공식 주소, 상담 채널, 본인 명의 원칙, 거래 설명이 충분히 제공되는지를 함께 살펴야 상담 품질을 구분하기 쉽습니다.',
+    ],
+  },
+  {
+    title: '무이자 할부와 상환 계획을 함께 보세요',
+    paragraphs: [
+      '무이자 할부는 부담을 나누는 데 도움이 될 수 있지만, 모든 카드와 모든 기간에 동일하게 적용되는 조건은 아닙니다. 카드사별 행사 기간과 개인 이용 조건을 직접 확인해야 하며, 상담 단계에서도 해당 부분을 먼저 점검하는 것이 좋습니다.',
+      '이번 달 청구액뿐 아니라 다음 달 고정지출, 이미 사용 중인 카드 대금, 추가 결제 예정 금액까지 같이 보는 것이 안전합니다. 급한 상황일수록 필요한 금액만 문의하고, 감당 가능한 범위 안에서 판단하는 것이 가장 현실적인 기준입니다.',
+    ],
+  },
+]
+
+const guideChecklist = [
+  '상담 전에 공식 주소와 채널명을 먼저 확인합니다.',
+  '본인 명의 카드와 계좌만 기준으로 문의합니다.',
+  '최종 결제액과 예상 입금액을 함께 비교합니다.',
+  '카드사 앱 또는 고객센터에서 할부 조건을 재확인합니다.',
+]
+
+const faqItems: Array<{
+  question: string
+  answer: string
+}> = [
+  {
+    question: '상담 전에 어떤 정보를 준비하면 좋나요?',
+    answer:
+      '사용 중인 카드사, 대략적인 필요 금액, 남아 있는 결제 한도, 본인 명의 계좌 여부를 알고 있으면 더 빠르게 안내를 받을 수 있습니다.',
+  },
+  {
+    question: '상담만 먼저 받아보고 결정해도 되나요?',
+    answer:
+      '가능합니다. 카드빵은 진행을 전제로 몰아가지 않고, 가능한 범위와 확인이 필요한 조건을 먼저 설명한 뒤 이용자가 직접 판단하도록 안내합니다.',
+  },
+  {
+    question: '무이자 할부는 항상 적용되나요?',
+    answer:
+      '항상 동일하게 적용되지는 않습니다. 카드사 정책, 이벤트 기간, 카드 종류, 개인 조건에 따라 달라질 수 있으므로 별도 확인이 필요합니다.',
+  },
+  {
+    question: '수수료는 어떻게 확인하나요?',
+    answer:
+      '문의 금액과 카드 조건을 기준으로 상담 시 설명합니다. 숫자 하나만 보는 것보다 결제 총액, 예상 입금액, 상환 부담을 함께 비교하는 편이 좋습니다.',
+  },
+  {
+    question: '어떤 경우에는 진행이 어려울 수 있나요?',
+    answer:
+      '타인 명의 카드나 계좌를 사용하는 경우, 대리 진행을 요청하는 경우, 카드사 정책상 확인이 어려운 경우에는 상담이 제한될 수 있습니다.',
+  },
+  {
+    question: '공식 채널 확인이 왜 중요한가요?',
+    answer:
+      '사칭 사이트나 유사 상호를 피하기 위해서입니다. 상담 전 도메인과 연결 채널을 확인하면 불필요한 혼선을 줄일 수 있습니다.',
+  },
+]
+
 function App() {
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'))
@@ -405,6 +475,48 @@ function App() {
         </div>
       </section>
 
+      <section className="guide-section" id="guide">
+        <span className="section-bg-icon guide-bg-icon" aria-hidden="true">
+          <Icon name="search" />
+        </span>
+        <div className="guide-heading" data-reveal="left">
+          <p className="eyebrow">Detailed Guide</p>
+          <h2>문의 전에 읽어두면 좋은 카드 상담 안내</h2>
+          <p>
+            짧은 광고 문구만으로는 판단하기 어려운 내용을, 실제 상담에서 자주
+            확인하는 순서대로 정리했습니다. 필요한 만큼 천천히 읽고 문의해 주세요.
+          </p>
+        </div>
+        <div className="guide-layout">
+          <div className="guide-articles">
+            {guideArticles.map((article, index) => (
+              <article
+                className="guide-article"
+                data-reveal="up"
+                key={article.title}
+                style={revealDelay(index)}
+              >
+                <h3>{article.title}</h3>
+                {article.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </article>
+            ))}
+          </div>
+          <aside className="guide-summary" data-reveal="right" style={revealDelay(2)}>
+            <strong>상담 전 체크포인트</strong>
+            <div className="guide-summary-list">
+              {guideChecklist.map((item, index) => (
+                <div key={item}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+          </aside>
+        </div>
+      </section>
+
       <section className="split-section" id="process">
         <span className="section-bg-icon process-bg-icon" aria-hidden="true">
           <Icon name="checkList" />
@@ -523,6 +635,29 @@ function App() {
               <strong>{name}</strong>
               <span>{phone}</span>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="faq-section" id="faq">
+        <span className="section-bg-icon faq-bg-icon" aria-hidden="true">
+          <Icon name="message" />
+        </span>
+        <div className="section-heading compact faq-heading" data-reveal="up">
+          <p className="eyebrow">FAQ</p>
+          <h2>자주 묻는 내용을 미리 정리했습니다</h2>
+        </div>
+        <div className="faq-grid">
+          {faqItems.map((item, index) => (
+            <article
+              className="faq-item"
+              data-reveal="up"
+              key={item.question}
+              style={revealDelay(index, 65)}
+            >
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
           ))}
         </div>
       </section>
