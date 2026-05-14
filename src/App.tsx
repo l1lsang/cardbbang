@@ -1,6 +1,6 @@
 import { useEffect, type CSSProperties, type ReactNode } from 'react'
 import logoImg from './assets/logo.png'
-import womanImg from './assets/woman.png'
+import womanImg from './assets/woman-blue.png'
 import './App.css'
 
 type RevealStyle = CSSProperties & {

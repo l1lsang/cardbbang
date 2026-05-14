@@ -1,14 +1,14 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 :root {
-  --ink: #0e2224;
-  --muted: #667574;
-  --muted-strong: #425352;
-  --green: #11a872;
-  --green-deep: #08795a;
-  --soft-mint: #e8f7ef;
-  --soft-yellow: #fff1a6;
-  --line: rgba(14, 34, 36, 0.1);
+  --ink: #071d3a;
+  --muted: #5e7088;
+  --muted-strong: #2f4967;
+  --blue: #2563eb;
+  --blue-deep: #0f4c9f;
+  --soft-blue: #e7f0ff;
+  --ice-blue: #dbeafe;
+  --line: rgba(7, 29, 58, 0.1);
   font-family:
     'Pretendard',
     -apple-system,
@@ -44,11 +44,11 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid rgba(17, 168, 114, 0.45);
+  outline: 3px solid rgba(37, 99, 235, 0.45);
   outline-offset: 3px;
 }
 
 ::selection {
-  background: var(--soft-yellow);
+  background: var(--ice-blue);
   color: var(--ink);
 }
