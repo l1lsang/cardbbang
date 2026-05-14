@@ -389,12 +389,12 @@ function App() {
               <span>상담 접수</span>
             </div>
             <div data-reveal="scale" style={revealDelay(6)}>
-              <strong>본인</strong>
-              <span>명의 원칙</span>
+              <strong>5분</strong>
+              <span>내로 입금</span>
             </div>
             <div data-reveal="scale" style={revealDelay(7)}>
-              <strong>정책</strong>
-              <span>카드사 확인</span>
+              <strong>10%</strong>
+              <span>수수료</span>
             </div>
           </div>
         </div>
