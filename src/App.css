@@ -670,7 +670,7 @@ p {
 
 .quick-contact-woman {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   width: min(520px, 74vw);
   height: auto;
   max-height: 650px;
@@ -684,7 +684,7 @@ p {
   position: absolute;
   left: 50%;
   bottom: -54px;
-  z-index: 2;
+  z-index: 3;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
