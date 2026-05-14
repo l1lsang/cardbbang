@@ -453,23 +453,31 @@ function App() {
         </div>
       </section>
 
-      <section className="quick-contact-section" aria-label="전화 및 카카오톡 상담 바로가기">
-        <div className="quick-contact-visual" data-reveal="left">
+      <section
+        className="quick-contact-section"
+        aria-label="전화 및 카카오톡 상담 바로가기"
+        data-reveal="up"
+      >
+        <div className="quick-contact-visual">
           <img src={woman2Img} alt="" className="quick-contact-woman" />
-        </div>
-        <div className="quick-contact-actions" data-reveal="right" style={revealDelay(1)}>
-          <a className="contact-image-link" href={phoneHref} aria-label={`${phoneNumber} 전화 바로 걸기`}>
-            <img src={phoneImg} alt="24시 고객센터 010-6475-9884 전화 바로 걸기" />
-          </a>
-          <a
-            className="contact-image-link"
-            href={kakaoHref}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="카드빵 카카오톡 상담 바로가기"
-          >
-            <img src={kakaoImg} alt="카드빵 카카오톡 상담 바로가기" />
-          </a>
+          <div className="quick-contact-actions">
+            <a
+              className="contact-image-link"
+              href={phoneHref}
+              aria-label={`${phoneNumber} 전화 바로 걸기`}
+            >
+              <img src={phoneImg} alt="24시 고객센터 010-6475-9884 전화 바로 걸기" />
+            </a>
+            <a
+              className="contact-image-link"
+              href={kakaoHref}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="카드빵 카카오톡 상담 바로가기"
+            >
+              <img src={kakaoImg} alt="카드빵 카카오톡 상담 바로가기" />
+            </a>
+          </div>
         </div>
       </section>
 
