@@ -639,7 +639,7 @@ p {
   position: relative;
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 30px 0 92px;
+  padding: 30px 0 142px;
 }
 
 .quick-contact-section::before {
@@ -670,25 +670,26 @@ p {
 
 .quick-contact-woman {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: min(520px, 74vw);
   height: auto;
   max-height: 650px;
   object-fit: contain;
   object-position: center bottom;
   filter: drop-shadow(0 28px 34px rgba(7, 29, 58, 0.14));
+  pointer-events: none;
 }
 
 .quick-contact-actions {
   position: absolute;
   left: 50%;
-  bottom: 78px;
-  z-index: 4;
+  bottom: -54px;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-  width: min(920px, calc(100% - 44px));
-  gap: 20px;
+  width: min(820px, calc(100% - 44px));
+  gap: 18px;
   align-content: center;
   transform: translateX(-50%);
 }
@@ -1428,7 +1429,7 @@ p {
   }
 
   .quick-contact-section {
-    padding: 8px 0 74px;
+    padding: 8px 0 112px;
   }
 
   .quick-contact-section::before {
@@ -1445,9 +1446,9 @@ p {
   }
 
   .quick-contact-actions {
-    bottom: 58px;
-    width: min(760px, calc(100% - 32px));
-    gap: 14px;
+    bottom: -42px;
+    width: min(680px, calc(100% - 32px));
+    gap: 12px;
   }
 
   h1 {
@@ -1553,7 +1554,7 @@ p {
   }
 
   .quick-contact-section {
-    padding: 0 0 58px;
+    padding: 0 0 76px;
   }
 
   .quick-contact-section::before {
@@ -1571,7 +1572,7 @@ p {
 
   .quick-contact-actions {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    bottom: 38px;
+    bottom: -18px;
     width: calc(100% - 20px);
     gap: 8px;
   }
