@@ -15,6 +15,7 @@ type IconName =
   | 'card'
   | 'chat'
   | 'checkList'
+  | 'kakao'
   | 'link'
   | 'lock'
   | 'message'
@@ -65,6 +66,13 @@ function Icon({ name }: IconProps) {
         <path d="M14.5 7h5" />
         <path d="M14.5 12.2h5" />
         <path d="M5.5 3.5h13A2.5 2.5 0 0 1 21 6v12a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18V6a2.5 2.5 0 0 1 2.5-2.5Z" />
+      </>
+    ),
+    kakao: (
+      <>
+        <path d="M12 5C7.6 5 4 7.7 4 11.1c0 2.1 1.4 4 3.5 5.1L6.9 19l3-1.7c.7.1 1.4.2 2.1.2 4.4 0 8-2.7 8-6.4S16.4 5 12 5Z" />
+        <path d="M8.7 11h6.6" />
+        <path d="M10.1 13.4h3.8" />
       </>
     ),
     link: (
@@ -144,7 +152,7 @@ function Icon({ name }: IconProps) {
 
 const phoneNumber = '010-6475-9884'
 const phoneHref = 'tel:01064759884'
-const kakaoHref = 'https://open.kakao.com/o/sxYY1sui'
+const kakaoHref = 'https://open.kakao.com/o/sTqvnUui'
 const officialDomain = 'www.카드빵.com'
 
 const strengths: Array<{
@@ -381,7 +389,7 @@ function App() {
               rel="noreferrer"
             >
               <span className="button-icon" aria-hidden="true">
-                TALK
+                <Icon name="kakao" />
               </span>
               카카오톡 상담
             </a>
