@@ -589,6 +589,78 @@ p {
   font-weight: 900;
 }
 
+.quick-contact-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.88fr) minmax(360px, 1.12fr);
+  align-items: center;
+  gap: 26px;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 22px 0 84px;
+}
+
+.quick-contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 76px 0 66px;
+  z-index: 0;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(231, 240, 255, 0.9)),
+    url('./assets/back1.png') center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(7, 29, 58, 0.07);
+}
+
+.quick-contact-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.quick-contact-visual {
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.quick-contact-woman {
+  width: min(430px, 104%);
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 28px 34px rgba(7, 29, 58, 0.14));
+}
+
+.quick-contact-actions {
+  display: grid;
+  gap: 18px;
+  align-content: center;
+}
+
+.contact-image-link {
+  display: block;
+  border-radius: 8px;
+  outline-offset: 5px;
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+.contact-image-link:hover,
+.contact-image-link:focus-visible {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 18px 28px rgba(7, 29, 58, 0.14));
+}
+
+.contact-image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .band,
 .guide-section,
 .split-section,
@@ -1286,6 +1358,7 @@ p {
   }
 
   .hero-section,
+  .quick-contact-section,
   .section-heading,
   .guide-layout,
   .split-section,
@@ -1299,6 +1372,24 @@ p {
     min-height: auto;
     gap: 34px;
     padding: 42px 0 68px;
+  }
+
+  .quick-contact-section {
+    gap: 0;
+    padding: 0 0 70px;
+  }
+
+  .quick-contact-section::before {
+    inset: 68px 0 44px;
+  }
+
+  .quick-contact-visual {
+    min-height: 460px;
+  }
+
+  .quick-contact-woman {
+    width: min(390px, 86%);
+    max-height: 520px;
   }
 
   h1 {
@@ -1382,6 +1473,7 @@ p {
 @media (max-width: 640px) {
   .header,
   .hero-section,
+  .quick-contact-section,
   .band,
   .guide-section,
   .split-section,
@@ -1400,6 +1492,27 @@ p {
 
   .hero-section {
     padding-top: 28px;
+  }
+
+  .quick-contact-section {
+    padding-bottom: 56px;
+  }
+
+  .quick-contact-section::before {
+    inset: 52px 0 32px;
+  }
+
+  .quick-contact-visual {
+    min-height: 330px;
+  }
+
+  .quick-contact-woman {
+    width: min(300px, 86%);
+    max-height: 380px;
+  }
+
+  .quick-contact-actions {
+    gap: 12px;
   }
 
   h1 {

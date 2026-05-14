@@ -1,6 +1,9 @@
 import { useEffect, type CSSProperties, type ReactNode } from 'react'
 import logoImg from './assets/logo.png'
 import womanImg from './assets/woman-blue.png'
+import woman2Img from './assets/woman2.png'
+import phoneImg from './assets/phone.png'
+import kakaoImg from './assets/kakao.png'
 import './App.css'
 
 type RevealStyle = CSSProperties & {
@@ -439,6 +442,26 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="quick-contact-section" aria-label="전화 및 카카오톡 상담 바로가기">
+        <div className="quick-contact-visual" data-reveal="left">
+          <img src={woman2Img} alt="" className="quick-contact-woman" />
+        </div>
+        <div className="quick-contact-actions" data-reveal="right" style={revealDelay(1)}>
+          <a className="contact-image-link" href={phoneHref} aria-label={`${phoneNumber} 전화 바로 걸기`}>
+            <img src={phoneImg} alt="24시 고객센터 010-6475-9884 전화 바로 걸기" />
+          </a>
+          <a
+            className="contact-image-link"
+            href={kakaoHref}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="카드빵 카카오톡 상담 바로가기"
+          >
+            <img src={kakaoImg} alt="카드빵 카카오톡 상담 바로가기" />
+          </a>
         </div>
       </section>
 
