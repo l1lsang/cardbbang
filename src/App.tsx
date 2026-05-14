@@ -363,8 +363,9 @@ function App() {
             24시 카드현금화 연중무휴 5분이내 완료
           </p>
           <h1 data-reveal="up" style={revealDelay(2)}>
-  개인,법인 신용카드 현금화
-            <span> 정식등록업체 카드빵</span>
+            <span className="hero-title-nowrap">개인,법인 신용카드 현금화</span>
+            <br />
+            <span className="hero-title-accent">정식등록업체 카드빵</span>
           </h1>
           <p className="hero-description" data-reveal="up" style={revealDelay(3)}>
             카드빵은 신용카드 현금화 상담 전 꼭 확인해야 할 본인 명의 원칙,
@@ -438,8 +439,8 @@ function App() {
             <div className="virtual-card-scene" aria-hidden="true">
               <div className="virtual-glass-card">
                 <div>
-                  <span>CARDBBANG</span>
                   <strong>카드빵</strong>
+                  <span>CARDBBANG</span>
                 </div>
                 <small>24H</small>
               </div>
