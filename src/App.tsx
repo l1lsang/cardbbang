@@ -355,8 +355,8 @@ function App() {
             24시 카드현금화 연중무휴 5분이내 완료
           </p>
           <h1 data-reveal="up" style={revealDelay(2)}>
-  급전,카드현금화
-            <span> 카드빵</span>
+  개인,법인 신용카드 현금화
+            <span> 정식등록업체 카드빵</span>
           </h1>
           <p className="hero-description" data-reveal="up" style={revealDelay(3)}>
             카드빵은 신용카드 현금화 상담 전 꼭 확인해야 할 본인 명의 원칙,
@@ -370,7 +370,7 @@ function App() {
           >
             <a className="button button-primary" href={phoneHref}>
               <span className="button-icon" aria-hidden="true">
-                TEL
+                <Icon name="phone" />
               </span>
               전화문의
             </a>
