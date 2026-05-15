@@ -372,34 +372,10 @@ function App() {
             카드사 정책, 상환 계획을 한 번에 점검하는 24시간 상담형 사이트입니다.
           </p>
           <div
-            className="hero-actions"
-            aria-label="상담 바로가기"
-            data-reveal="up"
-            style={revealDelay(4)}
-          >
-            <a className="button button-primary" href={phoneHref}>
-              <span className="button-icon" aria-hidden="true">
-                <Icon name="phone" />
-              </span>
-              전화문의
-            </a>
-            <a
-              className="button button-secondary"
-              href={kakaoHref}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="button-icon" aria-hidden="true">
-                <Icon name="kakao" />
-              </span>
-              카카오톡 상담
-            </a>
-          </div>
-          <div
             className="hero-contact-images"
             aria-label="전화 및 카카오톡 상담 바로가기"
             data-reveal="up"
-            style={revealDelay(5)}
+            style={revealDelay(4)}
           >
             <a
               className="contact-image-link"
