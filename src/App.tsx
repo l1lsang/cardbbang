@@ -395,19 +395,28 @@ function App() {
               카카오톡 상담
             </a>
           </div>
-          <div className="hero-stats" aria-label="카드빵 핵심 안내">
-            <div data-reveal="scale" style={revealDelay(5)}>
-              <strong>24H</strong>
-              <span>상담 접수</span>
-            </div>
-            <div data-reveal="scale" style={revealDelay(6)}>
-              <strong>5분</strong>
-              <span>내로 입금</span>
-            </div>
-            <div data-reveal="scale" style={revealDelay(7)}>
-              <strong>10%</strong>
-              <span>수수료</span>
-            </div>
+          <div
+            className="hero-contact-images"
+            aria-label="전화 및 카카오톡 상담 바로가기"
+            data-reveal="up"
+            style={revealDelay(5)}
+          >
+            <a
+              className="contact-image-link"
+              href={phoneHref}
+              aria-label={`${phoneNumber} 전화 바로 걸기`}
+            >
+              <img src={phoneImg} alt="24시 고객센터 010-6475-9884 전화 바로 걸기" />
+            </a>
+            <a
+              className="contact-image-link"
+              href={kakaoHref}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="카드빵 카카오톡 상담 바로가기"
+            >
+              <img src={kakaoImg} alt="카드빵 카카오톡 상담 바로가기" />
+            </a>
           </div>
         </div>
 
@@ -461,23 +470,19 @@ function App() {
       >
         <div className="quick-contact-visual">
           <img src={woman2Img} alt="" className="quick-contact-woman" />
-          <div className="quick-contact-actions">
-            <a
-              className="contact-image-link"
-              href={phoneHref}
-              aria-label={`${phoneNumber} 전화 바로 걸기`}
-            >
-              <img src={phoneImg} alt="24시 고객센터 010-6475-9884 전화 바로 걸기" />
-            </a>
-            <a
-              className="contact-image-link"
-              href={kakaoHref}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="카드빵 카카오톡 상담 바로가기"
-            >
-              <img src={kakaoImg} alt="카드빵 카카오톡 상담 바로가기" />
-            </a>
+          <div className="quick-contact-stats" aria-label="카드빵 핵심 안내">
+            <div data-reveal="scale" style={revealDelay(0)}>
+              <strong>24H</strong>
+              <span>상담 접수</span>
+            </div>
+            <div data-reveal="scale" style={revealDelay(1)}>
+              <strong>5분</strong>
+              <span>내로 입금</span>
+            </div>
+            <div data-reveal="scale" style={revealDelay(2)}>
+              <strong>10%</strong>
+              <span>수수료</span>
+            </div>
           </div>
         </div>
       </section>
