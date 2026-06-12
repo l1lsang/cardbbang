@@ -3,7 +3,6 @@ import logoImg from './assets/logo.png'
 import womanImg from './assets/woman-blue.png'
 import woman2Img from './assets/woman2.png'
 import phoneImg from './assets/phone.png'
-import kakaoImg from './assets/kakao.png'
 import './App.css'
 
 type RevealStyle = CSSProperties & {
@@ -15,7 +14,6 @@ type IconName =
   | 'card'
   | 'chat'
   | 'checkList'
-  | 'kakao'
   | 'link'
   | 'lock'
   | 'message'
@@ -66,13 +64,6 @@ function Icon({ name }: IconProps) {
         <path d="M14.5 7h5" />
         <path d="M14.5 12.2h5" />
         <path d="M5.5 3.5h13A2.5 2.5 0 0 1 21 6v12a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18V6a2.5 2.5 0 0 1 2.5-2.5Z" />
-      </>
-    ),
-    kakao: (
-      <>
-        <path d="M12 5C7.6 5 4 7.7 4 11.1c0 2.1 1.4 4 3.5 5.1L6.9 19l3-1.7c.7.1 1.4.2 2.1.2 4.4 0 8-2.7 8-6.4S16.4 5 12 5Z" />
-        <path d="M8.7 11h6.6" />
-        <path d="M10.1 13.4h3.8" />
       </>
     ),
     link: (
@@ -152,7 +143,6 @@ function Icon({ name }: IconProps) {
 
 const phoneNumber = '010-6475-9884'
 const phoneHref = 'tel:01064759884'
-const kakaoHref = 'https://open.kakao.com/o/sTqvnUui'
 const officialDomain = 'www.카드빵.com'
 
 const strengths: Array<{
@@ -165,7 +155,7 @@ const strengths: Array<{
     icon: 'calendar',
     number: '01',
     title: '365일 상담 접수',
-    text: '급한 일정에도 흐름을 놓치지 않도록 전화와 카카오톡 상담 동선을 한 화면에 정리했습니다.',
+    text: '급한 일정에도 흐름을 놓치지 않도록 전화 상담 동선을 한 화면에 정리했습니다.',
   },
   {
     icon: 'userCheck',
@@ -197,7 +187,7 @@ const process: Array<{
     icon: 'chat',
     step: '1',
     title: '1:1 상담',
-    text: '전화 또는 카카오톡으로 필요한 금액, 카드사, 한도 상황을 먼저 확인합니다.',
+    text: '전화로 필요한 금액, 카드사, 한도 상황을 먼저 확인합니다.',
   },
   {
     icon: 'checkList',
@@ -264,7 +254,7 @@ const guideArticles: Array<{
 ]
 
 const guideChecklist = [
-  '상담 전에 공식 주소와 채널명을 먼저 확인합니다.',
+  '상담 전에 공식 주소와 연락처를 먼저 확인합니다.',
   '본인 명의 카드와 계좌만 기준으로 문의합니다.',
   '최종 결제액과 예상 입금액을 함께 비교합니다.',
   '카드사 앱 또는 고객센터에서 할부 조건을 재확인합니다.',
@@ -300,9 +290,9 @@ const faqItems: Array<{
       '타인 명의 카드나 계좌를 사용하는 경우, 대리 진행을 요청하는 경우, 카드사 정책상 확인이 어려운 경우에는 상담이 제한될 수 있습니다.',
   },
   {
-    question: '공식 채널 확인이 왜 중요한가요?',
+    question: '공식 연락처 확인이 왜 중요한가요?',
     answer:
-      '사칭 사이트나 유사 상호를 피하기 위해서입니다. 상담 전 도메인과 연결 채널을 확인하면 불필요한 혼선을 줄일 수 있습니다.',
+      '사칭 사이트나 유사 상호를 피하기 위해서입니다. 상담 전 도메인과 연락처를 확인하면 불필요한 혼선을 줄일 수 있습니다.',
   },
 ]
 
@@ -373,7 +363,7 @@ function App() {
           </p>
           <div
             className="hero-contact-images"
-            aria-label="전화 및 카카오톡 상담 바로가기"
+            aria-label="전화 상담 바로가기"
             data-reveal="up"
             style={revealDelay(4)}
           >
@@ -383,15 +373,6 @@ function App() {
               aria-label={`${phoneNumber} 전화 바로 걸기`}
             >
               <img src={phoneImg} alt="24시 고객센터 010-6475-9884 전화 바로 걸기" />
-            </a>
-            <a
-              className="contact-image-link"
-              href={kakaoHref}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="카드빵 카카오톡 상담 바로가기"
-            >
-              <img src={kakaoImg} alt="카드빵 카카오톡 상담 바로가기" />
             </a>
           </div>
         </div>
@@ -441,7 +422,7 @@ function App() {
 
       <section
         className="quick-contact-section"
-        aria-label="전화 및 카카오톡 상담 바로가기"
+        aria-label="전화 상담 바로가기"
         data-reveal="up"
       >
         <div className="quick-contact-visual">
@@ -585,7 +566,7 @@ function App() {
           </h2>
           <p>
             카드빵은 상담 과정에서 불법 카드깡, 타인 명의 거래, 대리결제, 대출
-            강요로 이어지는 진행을 안내하지 않습니다. 공식 주소와 상담 채널을
+            강요로 이어지는 진행을 안내하지 않습니다. 공식 주소와 상담 연락처를
             반드시 확인해 주세요.
           </p>
         </div>
@@ -599,7 +580,7 @@ function App() {
           <span>{officialDomain}</span>
           <p>
             사칭 사이트를 통한 피해는 도움을 받기 어려울 수 있습니다. 상담 전
-            주소와 채널명을 꼭 확인하세요.
+            주소와 연락처를 꼭 확인하세요.
           </p>
         </div>
       </section>
@@ -689,10 +670,10 @@ function App() {
         </span>
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>상담 채널을 연결해 주세요</h2>
+          <h2>전화 상담으로 연결해 주세요</h2>
           <p>
-            전화 상담은 {phoneNumber}로 바로 연결됩니다. 카카오톡 상담은
-            오픈채팅으로 바로 이동합니다.
+            전화 상담은 {phoneNumber}로 바로 연결됩니다. 필요 내용을 짧게 확인한 뒤
+            가능한 범위와 유의사항을 안내합니다.
           </p>
         </div>
         <div className="contact-actions">
@@ -701,12 +682,6 @@ function App() {
               TEL
             </span>
             {phoneNumber}
-          </a>
-          <a className="button button-secondary" href={kakaoHref} target="_blank" rel="noreferrer">
-            <span className="button-icon" aria-hidden="true">
-              TALK
-            </span>
-            카카오톡 상담 바로가기
           </a>
         </div>
       </section>
